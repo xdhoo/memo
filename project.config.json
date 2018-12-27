@@ -1,0 +1,13 @@
+{
+  "description": "A AWESOME MEMORY",
+  "setting": {
+    "urlCheck": true,
+    "es6": false,
+    "postcss": false,
+    "minified": false
+  },
+  "compileType": "miniprogram",
+  "appid": "wx2cc4c7246d8edad1",
+  "projectname": "memo",
+  "miniprogramRoot": "./dist"
+}
