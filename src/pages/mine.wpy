@@ -16,7 +16,7 @@
   }
 </style>
 <template>
-  <!-- <view class="container">
+  <view class="container">
     <view class="userinfo" @tap="handleViewTap">
       <image class="userinfo-avatar" src="{{ userInfo.avatarUrl }}" background-size="cover"/>
       <view class="userinfo-nickname">{{ userInfo.nickName }}</view>
@@ -77,10 +77,6 @@
     </panel>
 
     <toast />
-  </view> -->
-  <view>
-    <repeat for="{{list}}" item="item"></repeat>
-    <articleItem >{{item}}</articleItem>
   </view>
 </template>
 
@@ -94,7 +90,6 @@
   import Group from '../components/group'
   import Toast from 'wepy-com-toast'
   import testMixin from '../mixins/test'
-  import ArticleItem from '@/components/article-item'
 
   console.log('moduleA ignored: ', moduleA) // => moduleA ignored: {}
 
@@ -112,7 +107,7 @@
 
   export default class Index extends wepy.page {
     config = {
-      navigationBarTitleText: 'MEMO'
+      navigationBarTitleText: 'test'
     }
     components = {
       panel: Panel,
@@ -120,8 +115,7 @@
       counter2: Counter,
       list: List,
       group: Group,
-      toast: Toast,
-      articleItem: ArticleItem
+      toast: Toast
     }
 
     mixins = [testMixin]
@@ -178,8 +172,7 @@
             }
           ]
         }
-      ],
-      list: [1, 2, 3]
+      ]
     }
 
     computed = {

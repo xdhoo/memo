@@ -1,0 +1,32 @@
+<style lang="less">
+  .add-article {
+    height: 100vh;
+    background-color: rgb(240, 235, 235);
+    & input {
+      height: 100rpx;
+      padding: 1rpx 24rpx;
+      border-bottom: 1px solid rgb(163, 161, 161);
+    };
+    & .content-input {
+      padding: 20rpx 24rpx;
+      & textarea {
+        width: 100%;
+      }
+    }
+    
+  }
+</style>
+<template>
+  <view class="add-article">
+    <view class="title-input">
+      <input type="text" placeholder="the title"/>
+    </view>
+    <view class="content-input">
+      <textarea type="text" placeholder="say somthing..."></textarea>
+    </view>
+  </view>
+</template>
+<script>
+export default {
+}
+</script>

@@ -1,0 +1,17 @@
+<style lang="less">
+  .article-item {
+    background-color: #c5d11a;
+    border-radius: 16rpx;
+    height: 128rpx;
+  }
+</style>
+<template>
+  <view class="article-item">
+    <div>asd</div>
+  </view>
+</template>
+<script>
+import wepy from 'wepy'
+export default class ArticleItem extends wepy.component {
+}
+</script>
