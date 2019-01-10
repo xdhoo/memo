@@ -12,21 +12,26 @@
       & textarea {
         width: 100%;
       }
-    }
-    
+    }    
   }
 </style>
 <template>
   <view class="add-article">
+    <header></header>
     <view class="title-input">
       <input type="text" placeholder="the title"/>
     </view>
     <view class="content-input">
-      <textarea type="text" placeholder="say somthing..."></textarea>
+      <textarea type="text" maxlength="-1" placeholder="say somthing..."></textarea>
     </view>
   </view>
 </template>
 <script>
-export default {
+import wepy from 'wepy'
+import Header from '@/components/header'
+export default class Add extends wepy.page {
+  components = {
+    header: Header
+  }
 }
 </script>

@@ -3,15 +3,28 @@
     background-color: #c5d11a;
     border-radius: 16rpx;
     height: 128rpx;
+    margin: 6rpx 4rpx;
+    display: flex;
+    .item-icon {
+      align-self: center;
+    }   
   }
 </style>
 <template>
   <view class="article-item">
-    <div>asd</div>
+    <div class="item-icon">
+      <image style="width:56px; height:56px" src="../images/list.png"></image>
+    </div>
+    <div class="item-content">
+      <text>{{item.title}}</text>  
+    </div>
   </view>
 </template>
 <script>
 import wepy from 'wepy'
 export default class ArticleItem extends wepy.component {
+  props = {
+    item: {}
+  }
 }
 </script>

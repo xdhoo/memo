@@ -1,0 +1,28 @@
+<style lang="less">
+  .header {
+    height: 128rpx;
+    background-color: #60a5b1;
+    text-align: center;
+    @media (min-height: 700px) {
+      height: 180rpx;
+    };
+    text {
+      color: rgb(212, 230, 112);
+      line-height: 160rpx;
+      @media (min-height: 700px) {
+        line-height: 260rpx;
+      };
+    }
+  }
+  
+</style>
+<template>
+  <view class="header">
+    <text>MEMO</text>
+  </view>
+</template>
+<script>
+import wepy from 'wepy'
+export default class Header extends wepy.component {
+}
+</script>

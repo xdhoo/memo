@@ -79,8 +79,10 @@
     <toast />
   </view> -->
   <view>
-    <repeat for="{{list}}" item="item"></repeat>
-    <articleItem >{{item}}</articleItem>
+    <header></header>
+    <repeat for="{{list}}" item="item">
+      <articleItem :item="item"></articleItem>
+    </repeat>
   </view>
 </template>
 
@@ -95,6 +97,7 @@
   import Toast from 'wepy-com-toast'
   import testMixin from '../mixins/test'
   import ArticleItem from '@/components/article-item'
+  import Header from '@/components/header'
 
   console.log('moduleA ignored: ', moduleA) // => moduleA ignored: {}
 
@@ -121,7 +124,8 @@
       list: List,
       group: Group,
       toast: Toast,
-      articleItem: ArticleItem
+      articleItem: ArticleItem,
+      header: Header
     }
 
     mixins = [testMixin]
@@ -179,7 +183,22 @@
           ]
         }
       ],
-      list: [1, 2, 3]
+      list: [{
+        title: 'The first day',
+        date: '2018-01-01'
+      }, {
+        title: 'The second day',
+        date: '2018-01-02'
+      }, {
+        title: 'The third day',
+        date: '2018-01-03'
+      }, {
+        title: 'The fourth day',
+        date: '2018-01-04'
+      }, {
+        title: 'The fifth day',
+        date: '2018-01-05'
+      }]
     }
 
     computed = {
